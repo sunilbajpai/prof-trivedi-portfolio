@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prof. Prajapati Trivedi — Scholar · Practitioner · Global Leader</title>
+  <!-- Meta tags for SEO -->
+  <meta name="description" content="Official portfolio of Prof. Prajapati Trivedi. Special Envoy for SDG Implementation, Distinguished Professor, world thought leader in government performance management, and NAPA Life Fellow.">
+  <meta name="keywords" content="Prajapati Trivedi, Government Performance Management, SDG Special Envoy, World Bank Economist, Public Administration, Public Sector Reform, Harvard Kennedy School">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body data-theme="light">
+
+  <!-- ===== HEADER / NAV ===== -->
+  <header id="header">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#" class="logo">Prajapati <span class="accent-span">Trivedi</span></a>
+        <nav id="desktop-nav">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#career">Career</a></li>
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#awards">Awards</a></li>
+            <li><a href="#affiliations">Affiliations</a></li>
+            <li><a href="#contact" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.75rem;">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="nav-controls">
+          <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle dark/light mode">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+          <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== MOBILE NAVIGATION DRAWER ===== -->
+  <div class="drawer-overlay" id="mobile-nav-overlay"></div>
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <div class="mobile-nav-header">
+      <a href="#" class="logo">Prajapati <span class="accent-span">Trivedi</span></a>
+      <button class="drawer-close" id="mobile-nav-close" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#career">Career</a></li>
+      <li><a href="#expertise">Expertise</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#awards">Awards</a></li>
+      <li><a href="#affiliations">Affiliations</a></li>
+      <li><a href="#contact" class="btn btn-primary" style="text-align: center; margin-top: 20px; padding: 10px;">Contact Me</a></li>
+    </ul>
+  </div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="hero">
+    <!-- Background Carousel Slider -->
+    <div class="hero-banner">
+      <img src="assets/slide_delhi.jpg" alt="Raisina Hill Secretariat Buildings, New Delhi" class="slide-item active" data-caption="New Delhi · Cabinet Secretariat">
+      <img src="assets/slide_london.jpg" alt="Palace of Westminster, London" class="slide-item" data-caption="London · Commonwealth Secretariat">
+      <img src="assets/slide_washington.jpg" alt="United States Capitol, Washington DC" class="slide-item" data-caption="Washington DC · World Bank &amp; NAPA">
+    </div>
+    <div class="hero-overlay"></div>
+
+    <!-- Active Caption and Dot Nav Controls -->
+    <div class="carousel-controls">
+      <div class="carousel-caption-text" id="carouselCaption">New Delhi · Cabinet Secretariat</div>
+      <div class="carousel-dots" id="carouselDots">
+        <button class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
+        <button class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
+        <button class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
+      </div>
+    </div>
+
+    <!-- Hero Content Overlay -->
+    <div class="hero-content-wrapper">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-text reveal-element">
+            <span class="section-subtitle" style="color: var(--accent-secondary); margin-bottom: 20px;">Scholar · Practitioner · Global Leader</span>
+            <h1>Prof. Prajapati <span class="accent-span">Trivedi</span></h1>
+            <p>Commonwealth Secretary-General's Special Envoy for SDG Implementation, Distinguished Professor, world thought leader in government performance management, and the first Indian elected Fellow of the National Academy of Public Administration (NAPA), USA.</p>
+            <div class="hero-buttons">
+              <a href="#about" class="btn btn-primary">Explore My Work</a>
+              <button class="btn btn-outline" style="color: #FFFFFF; border-color: rgba(255,255,255,0.4);" id="hero-contact-btn">Get in Touch</button>
+            </div>
+          </div>
+          <div class="hero-badge-container reveal-element" style="transition-delay: 0.2s;">
+            <div class="hero-avatar-wrapper">
+              <img src="assets/avatar.png" alt="Prof. Prajapati Trivedi Profile Picture">
+            </div>
+            <span class="hero-badge-label">Envoy &amp; Scholar</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FLOATING STATS BAR ===== -->
+  <section class="stats-bar">
+    <div class="container">
+      <div class="glass-panel stats-grid reveal-element">
+        <div class="stat-item">
+          <div class="stat-number" data-count="50">0</div>
+          <div class="stat-label">Countries Visited</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="40">0</div>
+          <div class="stat-label">Years Teaching</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="6">0</div>
+          <div class="stat-label">Books Published</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="3">0</div>
+          <div class="stat-label">Global Awards</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="about section-padding">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text reveal-element">
+          <span class="section-subtitle">About</span>
+          <h2>A Lifetime Dedicated to <span class="accent-span">Public Service</span></h2>
+          <p>Prof. Prajapati Trivedi is a globally recognized economist and public administration expert whose career spans academia, international development, and the highest levels of government. Born on August 9, 1953, he has spent over four decades shaping how governments measure and manage their performance.</p>
+          <p>Educated at St. Stephen's College (Delhi), the London School of Economics (M.Sc., 1972), and Boston University (Ph.D., 1985), Prof. Trivedi began his academic career as a lecturer at St. Stephen's College in 1974 before rising to become the youngest Chaired Tenured Professor at the Indian Institute of Management Calcutta.</p>
+          <p>His professional journey — from IIM Calcutta to the World Bank, the Government of India's Cabinet Secretariat, and the Commonwealth Secretariat in London — reflects a rare blend of academic rigor and real-world impact across more than 50 countries.</p>
+        </div>
+        <div class="about-highlights reveal-element" style="transition-delay: 0.2s;">
+          <div class="glass-panel highlight-card">
+            <div class="highlight-icon">🎓</div>
+            <h4>Education</h4>
+            <p>St. Stephen's College · LSE · Boston University (Ph.D. in Economics)</p>
+          </div>
+          <div class="glass-panel highlight-card">
+            <div class="highlight-icon">🌏</div>
+            <h4>Global Reach</h4>
+            <p>Direct professional governance consulting spanning 50+ nations</p>
+          </div>
+          <div class="glass-panel highlight-card">
+            <div class="highlight-icon">🏛️</div>
+            <h4>Government</h4>
+            <p>First Secretary of Performance Management, Government of India</p>
+          </div>
+          <div class="glass-panel highlight-card">
+            <div class="highlight-icon">📊</div>
+            <h4>World Bank</h4>
+            <p>14 years of service as a Senior Economist in Washington, DC</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CAREER TIMELINE ===== -->
+  <section id="career" class="career section-padding">
+    <div class="container">
+      <div class="text-center reveal-element">
+        <span class="section-subtitle">Career Journey</span>
+        <h2>Five Decades of <span class="accent-span">Impact</span></h2>
+        <p class="section-desc">From the classrooms of St. Stephen's College to the corridors of global power, Prof. Trivedi's career is a masterclass in bridging theory and practice.</p>
+      </div>
+
+      <div class="timeline">
+
+        <!-- 1974–1987 -->
+        <div class="timeline-item reveal-element">
+          <div class="timeline-dot"></div>
+          <div class="glass-panel timeline-content" data-milestone="1974">
+            <div class="timeline-year">1974 – 1987</div>
+            <h4>Lecturer in Economics, St. Stephen's College</h4>
+            <p>Began his academic career at one of India's most prestigious colleges, teaching economics and laying the intellectual foundations for his future work in public policy.</p>
+            <div class="timeline-hint">View details <i class="fa-solid fa-chevron-right"></i></div>
+          </div>
+        </div>
+
+        <!-- 1985 -->
+        <div class="timeline-item reveal-element">
+          <div class="timeline-dot"></div>
+          <div class="glass-panel timeline-content" data-milestone="1985">
+            <div class="timeline-year">1985</div>
+            <h4>Ph.D. in Economics, Boston University</h4>
+            <p>Completed doctoral studies in economics, deepening his expertise in microeconomics, public policy analysis, and institutional performance evaluation.</p>
+            <div class="timeline-hint">View details <i class="fa-solid fa-chevron-right"></i></div>
+          </div>
+        </div>
+
+        <!-- 1987–1992 -->
+        <div class="timeline-item reveal-element">
+          <div class="timeline-dot"></div>
+          <div class="glass-panel timeline-content" data-milestone="1987">
+            <div class="timeline-year">1987 – 1992</div>
+            <h4>STC Chair Professor, IIM Calcutta</h4>
+            <p>Became the youngest Chaired Tenured Professor at IIM Calcutta, directing the Centre for Public Enterprise Management and pioneering research on public sector reform.</p>
+            <div class="timeline-hint">View details <i class="fa-solid fa-chevron-right"></i></div>
+          </div>
+        </div>
+
+        <!-- 1992–1994 -->
+        <div class="timeline-item reveal-element">
+          <div class="timeline-dot"></div>
+          <div class="glass-panel timeline-content" data-milestone="1992">
+            <div class="timeline-year">1992 – 1994</div>
+            <h4>Economic Adviser, Government of India</h4>
+            <p>Advised the Government of India on economic policy during a highly pivotal era of economic liberalization, structural adjustments, and strategic policy reforms.</p>
+            <div class="timeline-hint">View details <i class="fa-solid fa-chevron-right"></i></div>
+          </div>
+        </div>
+
+        <!-- 1995–2009 -->
+        <div class="timeline-item reveal-element">
+          <div class="timeline-dot"></div>
+          <div class="glass-panel timeline-content" data-milestone="1995">
+            <div class="timeline-year">1995 – 2009</div>
+            <h4>Senior Economist, World Bank</h4>
+            <p>Spent 14 years at the World Bank in Washington, DC, advising on governance, public enterprise privatization, and administrative performance management across developing economies worldwide.</p>
+            <div class="timeline-hint">View details <i class="fa-solid fa-chevron-right"></i></div>
+          </div>
+        </div>
+
+        <!-- 2009–2014 -->
+        <div class="timeline-item reveal-element">
+          <div class="timeline-dot"></div>
+          <div class="glass-panel timeline-content" data-milestone="2009">
+            <div class="timeline-year">2009 – 2014</div>
+            <h4>Secretary, Performance Management & Chairman, NACWC</h4>
+            <p>Served in the Prime Minister's Office Cabinet Secretariat, designing India's whole-of-government performance evaluation system. Simultaneously chaired the National Authority for Chemical Weapons Convention.</p>
+            <div class="timeline-hint">View details <i class="fa-solid fa-chevron-right"></i></div>
+          </div>
+        </div>
+
+        <!-- 2014–Present -->
+        <div class="timeline-item reveal-element">
+          <div class="timeline-dot"></div>
+          <div class="glass-panel timeline-content" data-milestone="2014">
+            <div class="timeline-year">2014 – Present</div>
+            <h4>Global Roles: Commonwealth Special Envoy, Harvard Faculty & MDI</h4>
+            <p>Currently serves as Special Envoy for SDG Implementation, Distinguished Professor at MDI Gurgaon, Visiting Economics Faculty at Harvard Kennedy School, and IBM Center Visiting Fellow.</p>
+            <div class="timeline-hint">View details <i class="fa-solid fa-chevron-right"></i></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AREAS OF EXPERTISE ===== -->
+  <section id="expertise" class="expertise section-padding">
+    <div class="container">
+      <div class="text-center reveal-element">
+        <span class="section-subtitle">Areas of Expertise</span>
+        <h2>Domains of <span class="accent-span">Knowledge</span></h2>
+        <p class="section-desc">Decades of experience at the intersection of applied economics, global governance, and institutional reform.</p>
+      </div>
+
+      <div class="expertise-grid">
+
+        <div class="glass-panel expertise-card reveal-element">
+          <div class="icon">📈</div>
+          <h3>Government Performance</h3>
+          <p>Designing and implementing whole-of-government performance monitoring systems. Created India's Results-Framework Document (RFD) system used across all central government departments.</p>
+        </div>
+
+        <div class="glass-panel expertise-card reveal-element" style="transition-delay: 0.1s;">
+          <div class="icon">🏗️</div>
+          <h3>Public Sector Reform</h3>
+          <p>Global expert in privatization transactions and public enterprise management, with practical analytical frameworks adopted by major governments and international institutions.</p>
+        </div>
+
+        <div class="glass-panel expertise-card reveal-element" style="transition-delay: 0.2s;">
+          <div class="icon">🌍</div>
+          <h3>Sustainable Development</h3>
+          <p>As Commonwealth Special Envoy for SDG Implementation, bridges the gap between high-level SDG vision and actionable national government programs across 56 member nations.</p>
+        </div>
+
+        <div class="glass-panel expertise-card reveal-element">
+          <div class="icon">📐</div>
+          <h3>Applied Microeconomics</h3>
+          <p>Deep expertise in applying microeconomic principles to public policy analysis, with over 40 years of teaching at Harvard Kennedy School and other leading academic institutions.</p>
+        </div>
+
+        <div class="glass-panel expertise-card reveal-element" style="transition-delay: 0.1s;">
+          <div class="icon">⚖️</div>
+          <h3>Public Policy Analysis</h3>
+          <p>Successfully bridging academic theory with practical governance challenges, advising senior government officials on policy design, implementation, and assessment frameworks.</p>
+        </div>
+
+        <div class="glass-panel expertise-card reveal-element" style="transition-delay: 0.2s;">
+          <div class="icon">🤝</div>
+          <h3>International Development</h3>
+          <p>14 years at the World Bank and extensive work with the Commonwealth Secretariat across 50+ countries on governance reform, economic advisory, and institutional capacity building.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PUBLICATIONS ===== -->
+  <section id="publications" class="publications section-padding">
+    <div class="container">
+      <div class="text-center reveal-element">
+        <span class="section-subtitle">Publications</span>
+        <h2>Books &amp; <span class="accent-span">Writings</span></h2>
+        <p class="section-desc">A comprehensive body of scholarly and practitioner-focused work spanning over three decades.</p>
+      </div>
+
+      <!-- Live Search & Filtering Controls -->
+      <div class="pub-controls reveal-element">
+        <div class="pub-search-wrapper">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" id="pub-search" placeholder="Search by title, publisher, or year...">
+        </div>
+        <div class="pub-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="book">Books</button>
+          <button class="filter-btn" data-filter="monograph">Monographs</button>
+        </div>
+      </div>
+
+      <div class="pub-grid" id="publications-grid">
+
+        <!-- Pub 1 -->
+        <div class="glass-panel pub-card reveal-element" data-type="book">
+          <div class="pub-card-header"></div>
+          <div class="pub-card-body">
+            <span class="pub-tag">Book</span>
+            <h4>Performance Management in Government — A Primer for Leaders</h4>
+            <p class="pub-publisher">Commonwealth Secretariat, London</p>
+            <p class="pub-year">Latest Edition</p>
+          </div>
+        </div>
+
+        <!-- Pub 2 -->
+        <div class="glass-panel pub-card reveal-element" data-type="book" style="transition-delay: 0.1s;">
+          <div class="pub-card-header"></div>
+          <div class="pub-card-body">
+            <span class="pub-tag">Book</span>
+            <h4>How to Implement Privatization Transactions — A Manual for Practitioners</h4>
+            <p class="pub-publisher">Rutledge Books, USA</p>
+            <p class="pub-year">2000</p>
+          </div>
+        </div>
+
+        <!-- Pub 3 -->
+        <div class="glass-panel pub-card reveal-element" data-type="book" style="transition-delay: 0.2s;">
+          <div class="pub-card-header"></div>
+          <div class="pub-card-body">
+            <span class="pub-tag">Book</span>
+            <h4>A Critique of Public Enterprise Policy</h4>
+            <p class="pub-publisher">International Management Publisher, India</p>
+            <p class="pub-year">1992</p>
+          </div>
+        </div>
+
+        <!-- Pub 4 -->
+        <div class="glass-panel pub-card reveal-element" data-type="book">
+          <div class="pub-card-header"></div>
+          <div class="pub-card-body">
+            <span class="pub-tag">Book</span>
+            <h4>Applied Microeconomics for Public Policy Makers — A Provisional Text</h4>
+            <p class="pub-publisher">International Management Publisher, India</p>
+            <p class="pub-year">1991</p>
+          </div>
+        </div>
+
+        <!-- Pub 5 -->
+        <div class="glass-panel pub-card reveal-element" data-type="book" style="transition-delay: 0.1s;">
+          <div class="pub-card-header"></div>
+          <div class="pub-card-body">
+            <span class="pub-tag">Book</span>
+            <h4>Memorandum of Understanding — An Approach to Improving Performance</h4>
+            <p class="pub-publisher">International Management Publisher, India</p>
+            <p class="pub-year">1990</p>
+          </div>
+        </div>
+
+        <!-- Pub 6 -->
+        <div class="glass-panel pub-card reveal-element" data-type="monograph" style="transition-delay: 0.2s;">
+          <div class="pub-card-header"></div>
+          <div class="pub-card-body">
+            <span class="pub-tag">Monograph</span>
+            <h4>Performance Related Pay — A Primer on 7th Pay Commission</h4>
+            <p class="pub-publisher">Indian School of Business (ISB), Mohali</p>
+            <p class="pub-year">2015</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AWARDS ===== -->
+  <section id="awards" class="awards section-padding">
+    <div class="container">
+      <div class="text-center reveal-element">
+        <span class="section-subtitle">Recognition</span>
+        <h2>Awards &amp; <span class="accent-span">Honours</span></h2>
+      </div>
+
+      <div class="awards-grid">
+
+        <div class="glass-panel award-card reveal-element">
+          <div class="award-icon-box">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+          <h4>International Public Administration Award</h4>
+          <p>First Indian to receive this prestigious global award recognizing significant contributions to the theory and practice of public administration worldwide.</p>
+          <span class="award-org">ASPA · 2017</span>
+        </div>
+
+        <div class="glass-panel award-card reveal-element" style="transition-delay: 0.1s;">
+          <div class="award-icon-box">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <h4>Life Fellow, NAPA</h4>
+          <p>First Indian elected as a Life Fellow of the National Academy of Public Administration, acknowledging outstanding lifetime leadership in governance and public sector reforms.</p>
+          <span class="award-org">NAPA, Washington DC</span>
+        </div>
+
+        <div class="glass-panel award-card reveal-element" style="transition-delay: 0.2s;">
+          <div class="award-icon-box">
+            <i class="fa-solid fa-medal"></i>
+          </div>
+          <h4>Harry Hatry Practices Award</h4>
+          <p>Awarded for exceptional teaching, training, and institutional consultation in performance management that has shaped administrative policies globally.</p>
+          <span class="award-org">CAP &amp; ASPA · 2019</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AFFILIATIONS ===== -->
+  <section id="affiliations" class="affiliations section-padding">
+    <div class="container">
+      <div class="text-center reveal-element">
+        <span class="section-subtitle">Affiliations</span>
+        <h2>Institutional <span class="accent-span">Connections</span></h2>
+      </div>
+
+      <div class="affiliation-grid">
+
+        <!-- HKS -->
+        <div class="glass-panel affiliation-card reveal-element" data-aff="hks">
+          <span class="aff-icon">🏫</span>
+          <h4>Harvard Kennedy School</h4>
+          <p>Visiting Economics Faculty</p>
+        </div>
+
+        <!-- Commonwealth -->
+        <div class="glass-panel affiliation-card reveal-element" data-aff="comm" style="transition-delay: 0.1s;">
+          <span class="aff-icon">🌐</span>
+          <h4>Commonwealth Secretariat</h4>
+          <p>Special Envoy for SDG Implementation</p>
+        </div>
+
+        <!-- MDI -->
+        <div class="glass-panel affiliation-card reveal-element" data-aff="mdi" style="transition-delay: 0.2s;">
+          <span class="aff-icon">📚</span>
+          <h4>MDI Gurgaon</h4>
+          <p>Distinguished Professor</p>
+        </div>
+
+        <!-- IBM -->
+        <div class="glass-panel affiliation-card reveal-element" data-aff="ibm" style="transition-delay: 0.3s;">
+          <span class="aff-icon">💼</span>
+          <h4>IBM Center</h4>
+          <p>Visiting International Fellow</p>
+        </div>
+
+        <!-- NAPA -->
+        <div class="glass-panel affiliation-card reveal-element" data-aff="napa">
+          <span class="aff-icon">🏛️</span>
+          <h4>NAPA</h4>
+          <p>Life Fellow (First Indian Elected)</p>
+        </div>
+
+        <!-- ISID -->
+        <div class="glass-panel affiliation-card reveal-element" data-aff="isid" style="transition-delay: 0.1s;">
+          <span class="aff-icon">🔬</span>
+          <h4>ISID, New Delhi</h4>
+          <p>Board Member</p>
+        </div>
+
+        <!-- ITRHD -->
+        <div class="glass-panel affiliation-card reveal-element" data-aff="itrhd" style="transition-delay: 0.2s;">
+          <span class="aff-icon">🏘️</span>
+          <h4>ITRHD</h4>
+          <p>Board Member</p>
+        </div>
+
+        <!-- IILM -->
+        <div class="glass-panel affiliation-card reveal-element" data-aff="iilm" style="transition-delay: 0.3s;">
+          <span class="aff-icon">🎓</span>
+          <h4>IILM University</h4>
+          <p>Board, School of Management</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA / CONTACT ===== -->
+  <section id="contact" class="contact-section section-padding">
+    <div class="container">
+      <div class="contact-wrapper text-center reveal-element">
+        <span class="section-subtitle" style="color: var(--accent-secondary); margin-bottom: 20px;">Get in Touch</span>
+        <h2>Let's <span class="accent-span">Connect</span></h2>
+        <p class="section-desc">Whether for academic collaboration, speaking engagements, advisory boards, or public sector performance consultations — I welcome the opportunity to engage.</p>
+        
+        <div class="contact-btn-box">
+          <button class="btn btn-primary" id="open-booking-btn">
+            <i class="fa-solid fa-calendar-check"></i> Request Consultation
+          </button>
+          <a href="mailto:contact@prajapatitrivedi.com" class="btn btn-outline" style="color: #FFFFFF; border-color: rgba(255,255,255,0.3);">
+            <i class="fa-solid fa-envelope"></i> Email Me Directly
+          </a>
+        </div>
+
+        <div class="contact-grid-links">
+          <a href="https://www.linkedin.com/in/prajapati-trivedi-0b075054/" target="_blank" class="contact-link-item">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://independent.academia.edu/PrajapatiTrivedi" target="_blank" class="contact-link-item">
+            <i class="fa-solid fa-graduation-cap"></i> Academia.edu
+          </a>
+          <a href="https://www.businessofgovernment.org/bio/prajapati-trivedi" target="_blank" class="contact-link-item">
+            <i class="fa-solid fa-building"></i> IBM Bio
+          </a>
+          <a href="https://about.me/prajapati.trivedi" target="_blank" class="contact-link-item">
+            <i class="fa-solid fa-user"></i> About.me
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Prof. Prajapati Trivedi. All rights reserved. &nbsp;|&nbsp; <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms of Service</a></p>
+    </div>
+  </footer>
+
+  <!-- ===== INTERACTIVE GLASSMORPHIC TIMELINE DETAIL DRAWER ===== -->
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+  <div class="side-drawer" id="milestone-drawer">
+    <div class="drawer-header">
+      <h3 id="drawer-header-title">Career Detail</h3>
+      <button class="drawer-close" id="drawer-close" aria-label="Close details">&times;</button>
+    </div>
+    <div class="drawer-body">
+      <span class="drawer-year" id="drawer-year">1974</span>
+      <h4 class="drawer-title" id="drawer-title">Title goes here</h4>
+      <div class="drawer-content" id="drawer-content">
+        <!-- Dyn injected Content -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== INTERACTIVE BOOKING WIZARD MODAL ===== -->
+  <div class="modal-overlay" id="booking-modal-overlay">
+    <div class="wizard-modal">
+      <div class="wizard-header">
+        <div class="wizard-title">
+          <h3>Request Consultation</h3>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0;" id="wizard-subtitle">Step 1 of 3: Select Inquiry Type</p>
+        </div>
+        <button class="drawer-close" id="booking-close" aria-label="Close booking">&times;</button>
+        <div class="wizard-progress">
+          <div class="wizard-progress-bar" id="wizard-progress-bar"></div>
+        </div>
+      </div>
+
+      <form id="consultation-form">
+        <div class="wizard-body">
+          
+          <!-- STEP 1: INQUIRY TYPE -->
+          <div class="wizard-step active" data-step="1">
+            <p style="margin-bottom: 24px;">Please select the primary area of interest for your inquiry:</p>
+            <div class="options-grid">
+              <div class="option-card" data-value="Speaking Engagement">
+                <span class="icon">🎙️</span>
+                <span>Keynote Speaking</span>
+              </div>
+              <div class="option-card" data-value="Policy Consultation">
+                <span class="icon">🏛️</span>
+                <span>Policy Advisory</span>
+              </div>
+              <div class="option-card" data-value="Academic Collaboration">
+                <span class="icon">📚</span>
+                <span>Academic Work</span>
+              </div>
+              <div class="option-card" data-value="Board / Panel Request">
+                <span class="icon">🤝</span>
+                <span>Board / Panels</span>
+              </div>
+            </div>
+            <input type="hidden" id="inquiry-type" name="inquiryType" required>
+          </div>
+
+          <!-- STEP 2: CONTACT DETAILS -->
+          <div class="wizard-step" data-step="2">
+            <div class="form-group">
+              <label for="form-name">Your Full Name *</label>
+              <input type="text" class="form-control" id="form-name" name="name" required placeholder="Dr. Jane Smith">
+            </div>
+            <div class="form-group">
+              <label for="form-email">Work Email Address *</label>
+              <input type="email" class="form-control" id="form-email" name="email" required placeholder="smith@university.edu">
+            </div>
+            <div class="form-group">
+              <label for="form-org">Organization / Institution *</label>
+              <input type="text" class="form-control" id="form-org" name="organization" required placeholder="Global Institute of Governance">
+            </div>
+          </div>
+
+          <!-- STEP 3: MESSAGE DETAILS -->
+          <div class="wizard-step" data-step="3">
+            <div class="form-group">
+              <label for="form-message">Describe Your Inquiry / Event Details *</label>
+              <textarea class="form-control" id="form-message" name="message" required placeholder="Please describe the objective of the request, date proposals, or structural consultation scope..."></textarea>
+            </div>
+          </div>
+
+          <!-- STEP 4: SUCCESS BANNER -->
+          <div class="wizard-step" data-step="4">
+            <div class="wizard-success-state">
+              <div class="success-icon-box">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <h3>Request Submitted</h3>
+              <p style="color: var(--text-muted); margin-top: 10px;">Thank you for reaching out. Prof. Trivedi's administrative team will review your inquiry and get back to you shortly.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="wizard-footer" id="wizard-footer">
+          <button type="button" class="btn btn-outline" id="prev-step" style="opacity: 0; pointer-events: none; padding: 10px 24px;">Back</button>
+          <button type="button" class="btn btn-primary" id="next-step" style="padding: 10px 24px;">Continue</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script src="app.js"></script>
+</body>
+</html>
