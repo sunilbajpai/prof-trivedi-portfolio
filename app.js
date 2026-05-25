@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const currentValue = Math.floor(easeProgress * target);
         
         // Append '+' to matches that represent higher ranges
-        if (target === 50 || target === 40) {
+        if (target === 50 || target === 40 || target === 336) {
           stat.textContent = `${currentValue}+`;
         } else {
           stat.textContent = currentValue;
@@ -216,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (progress < 1) {
           requestAnimationFrame(updateCounter);
         } else {
-          stat.textContent = target === 50 || target === 40 ? `${target}+` : target;
+          stat.textContent = (target === 50 || target === 40 || target === 336) ? `${target}+` : target;
         }
       }
 
