@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found — Prof. Prajapati Trivedi</title>
+  <!-- SEO Meta -->
+  <meta name="description" content="Official portfolio of Prof. Prajapati Trivedi. Page not found.">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+    .error-wrapper {
+      max-width: 580px;
+      width: 100%;
+      text-align: center;
+      padding: 50px 40px;
+    }
+    .error-code {
+      font-family: var(--font-display);
+      font-size: clamp(4rem, 10vw, 7rem);
+      font-weight: 900;
+      line-height: 1;
+      background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
+    }
+    .error-wrapper h1 {
+      margin-bottom: 16px;
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+    }
+    .error-wrapper p {
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      font-size: 1.05rem;
+    }
+    .logo-container {
+      margin-bottom: 40px;
+    }
+  </style>
+  <script>
+    // Sync theme immediately to prevent layout flashes
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      document.body.setAttribute('data-theme', savedTheme);
+    });
+  </script>
+</head>
+<body data-theme="light">
+
+  <div class="glass-panel error-wrapper">
+    <div class="logo-container">
+      <a href="index.html" class="logo">Prajapati <span class="accent-span">Trivedi</span></a>
+    </div>
+    
+    <div class="error-code">404</div>
+    
+    <h1>Page Not Found</h1>
+    <p>The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+    
+    <a href="index.html" class="btn btn-primary">
+      <i class="fa-solid fa-house"></i> Back to Homepage
+    </a>
+  </div>
+
+</body>
+</html>
