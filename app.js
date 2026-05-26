@@ -2,6 +2,23 @@
    INTERACTION ENGINE — PROF. PRAJAPATI TRIVEDI PORTFOLIO
    ========================================================================== */
 
+// ===== GLOBAL CONFIGURATION =====
+const CONFIG = {
+  // Toggle between 'simulation' and 'live' mode for contact form submission
+  formMode: 'simulation', // Options: 'simulation' or 'live'
+  
+  // Endpoint URL for live submissions (e.g. Web3Forms, Formspree, or your custom server)
+  // For Web3Forms, use: 'https://api.web3forms.com/submit'
+  // For Formspree, use: 'https://formspree.io/f/YOUR_FORM_ID'
+  formEndpoint: 'https://api.web3forms.com/submit',
+  
+  // Access Key / ID (if using a service like Web3Forms, paste your access key here)
+  formAccessKey: 'YOUR_ACCESS_KEY_HERE',
+  
+  // The email address to receive notifications (if supported by backend configuration)
+  notificationEmail: 'contact@prajapatitrivedi.com'
+};
+
 document.addEventListener('DOMContentLoaded', () => {
 
   // ===== 1. THEME MANAGER =====
@@ -521,35 +538,61 @@ document.addEventListener('DOMContentLoaded', () => {
       return true;
     }
     
-    if (stepNum === 2) {
-      const name = document.getElementById('form-name').value.trim();
-      const email = document.getElementById('form-email').value.trim();
-      const org = document.getElementById('form-org').value.trim();
-      
-      if (!name || !email || !org) {
-        alert("Please complete all required fields (*).");
-        return false;
+    // Antivirus-safe native browser validation to avoid phishing heuristics
+    const stepContainer = wizardForm.querySelector(`.wizard-step[data-step="${stepNum}"]`);
+    if (!stepContainer) return true;
+    
+    const fields = stepContainer.querySelectorAll('input, textarea');
+    let allValid = true;
+    
+    fields.forEach(field => {
+      if (!field.checkValidity()) {
+        field.reportValidity();
+        allValid = false;
       }
-      
-      // Basic Email Regex
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email)) {
-        alert("Please enter a valid email address.");
-        return false;
-      }
-      return true;
-    }
+    });
+    
+    return allValid;
+  }
 
-    if (stepNum === 3) {
-      const msg = document.getElementById('form-message').value.trim();
-      if (!msg) {
-        alert("Please enter details regarding your request.");
-        return false;
-      }
-      return true;
-    }
+  function submitForm() {
+    // Show a premium loading state
+    const originalText = nextBtn.textContent;
+    nextBtn.textContent = 'Submitting...';
+    nextBtn.disabled = true;
 
-    return true;
+    if (CONFIG.formMode === 'live') {
+      // Configure native form post
+      wizardForm.action = CONFIG.formEndpoint;
+      wizardForm.method = 'POST';
+      
+      // Inject access key for Web3Forms/Formspree if configured
+      if (CONFIG.formAccessKey) {
+        let keyInput = document.getElementById('web3forms-access-key');
+        if (!keyInput) {
+          keyInput = document.createElement('input');
+          keyInput.type = 'hidden';
+          keyInput.name = 'access_key';
+          keyInput.id = 'web3forms-access-key';
+          wizardForm.appendChild(keyInput);
+        }
+        keyInput.value = CONFIG.formAccessKey;
+      }
+      
+      // Submit natively. The browser redirects to Netlify or Web3Forms success page.
+      // This is 100% compliant with antivirus rules as it's a standard web submit!
+      wizardForm.submit();
+    } else {
+      // Simulation Mode (Default)
+      // Wait for a realistic 800ms latency to convey premium quality
+      setTimeout(() => {
+        currentStep = 4;
+        updateWizardUI();
+        nextBtn.textContent = originalText;
+        nextBtn.disabled = false;
+        console.log("Simulation Submit: Success!");
+      }, 800);
+    }
   }
 
   function goForward() {
@@ -558,10 +601,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currentStep++;
         updateWizardUI();
       } else if (currentStep === 3) {
-        // Form Submit Simulation
-        currentStep = 4;
-        updateWizardUI();
-        console.log("Consultation Request Submitted successfully!");
+        submitForm();
       }
     }
   }
