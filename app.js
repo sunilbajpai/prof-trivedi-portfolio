@@ -625,4 +625,245 @@ document.addEventListener('DOMContentLoaded', () => {
     updateWizardUI();
   }
 
+  // ===== 10. GPM ACADEMY / MASTERCLASS ENGINE =====
+  const GPM_SESSIONS = [
+    {
+      id: 1,
+      title: "A Toolkit for Practitioners",
+      embedUrl: "https://drive.google.com/file/d/1OBC6t2ho2peyFLV_Y9kuBD8WeJP9_4eH/preview",
+      description: "An essential primer for governance practitioners on using structural tools and frameworks to optimize public service delivery.",
+      takeaways: [
+        "Introduction to whole-of-government GPM tools.",
+        "Bridging the gap between high-level policy and real-world results.",
+        "Establishing objective metrics for sustainable accountability."
+      ]
+    },
+    {
+      id: 2,
+      title: "The Solutions",
+      embedUrl: "https://drive.google.com/file/d/1NqSNtaBwcJtnKW1Vt5R1dpg0xtvCwb6B/preview",
+      description: "Exploring programmatic solutions to address systemic administrative bottlenecks and improve state capacity.",
+      takeaways: [
+        "Identifying roots of bureaucratic inertia and delivery failure.",
+        "Designing performance incentive loops for government departments.",
+        "Operationalizing monitoring systems that drive organizational reform."
+      ]
+    },
+    {
+      id: 3,
+      title: "What Gets Measured Gets Done",
+      embedUrl: "https://drive.google.com/file/d/1psjiYv9f60JstgeGO1IQPzY3IrF6iGiY/preview",
+      description: "The core philosophy of metric-based governance, examining why quantitative targets drive institutional focus.",
+      takeaways: [
+        "The psychological and institutional impact of visible metrics.",
+        "Constructing clear parameters for otherwise abstract policy goals.",
+        "Avoiding measurement pitfalls like gaming and goal displacement."
+      ]
+    },
+    {
+      id: 4,
+      title: "How to Measure Performance",
+      embedUrl: "https://drive.google.com/file/d/1ShccxYRfmxfEc1quH24tJFGcuGVF9ETe/preview",
+      description: "Practical methodologies for building rigorous, reliable, and verifiable metrics within public organizations.",
+      takeaways: [
+        "Differentiating between inputs, outputs, outcomes, and impact.",
+        "Formulating indicators that represent true performance.",
+        "Setting realistic, data-backed baselines and target ranges."
+      ]
+    },
+    {
+      id: 5,
+      title: "In Search of Accountability",
+      embedUrl: "https://drive.google.com/file/d/1piK3il97g6lqJTe8EO0HE7omc-3B_Fw-/preview",
+      description: "Exploring institutional models of accountability, focusing on aligning individual effort with public sector goals.",
+      takeaways: [
+        "Structural versus individual accountability paradigms.",
+        "Building administrative checks and balances that prevent corruption.",
+        "Designing evaluation feedback loops to continuously improve systems."
+      ]
+    },
+    {
+      id: 6,
+      title: "A Case Study on Bhutan",
+      embedUrl: "https://drive.google.com/file/d/1hpkpYyU6iYhGcfZAEcpesnqaFk7_sn-s/preview",
+      description: "An analytical case study of Bhutan's Gross National Happiness (GNH) index and its performance management implementation.",
+      takeaways: [
+        "Translating multi-dimensional happiness metrics into policy action.",
+        "How a small nation structured a unified governance evaluation framework.",
+        "Lessons on cultural values integration in modern public administration."
+      ]
+    },
+    {
+      id: 7,
+      title: "How to Rate a Government Performance System",
+      embedUrl: "https://drive.google.com/file/d/1uJvabU5P2kHgCbzKANa87cMITl0qO4ZG/preview",
+      description: "A rigorous framework for auditing, scoring, and rating the maturity of government-wide monitoring systems.",
+      takeaways: [
+        "Key quality dimensions for public sector evaluation architectures.",
+        "Differentiating between superficial checklists and robust systems.",
+        "Developing independent, reliable scoring indexes for state performance."
+      ]
+    },
+    {
+      id: 8,
+      title: "A Case of the United States",
+      embedUrl: "https://drive.google.com/file/d/1u-qsz2yv-zk3iSdDkeli2hWtnV2TsJTY/preview",
+      description: "An analysis of the Government Performance and Results Act (GPRA) and performance frameworks in the US federal government.",
+      takeaways: [
+        "The evolution of GPM in the United States from GPRA to GPRAMA.",
+        "Congressional oversight and executive branch alignment challenges.",
+        "Practical takeaways from US federal agency performance reporting."
+      ]
+    },
+    {
+      id: 9,
+      title: "SMART Toolkit",
+      embedUrl: "https://drive.google.com/file/d/1bVboAHbjwIinkZjR4GZi1ZQPuw3q9D7U/preview",
+      description: "A comprehensive breakdown of the SMART toolkit, a software and methodology designed to track policy commitments.",
+      takeaways: [
+        "The conceptual design and technical architecture of the SMART Toolkit.",
+        "Bridging political manifestos and actual cabinet-level achievements.",
+        "Securing transparency and automated reporting across agencies."
+      ]
+    },
+    {
+      id: 10,
+      title: "Case Study of GPM in India (RFD)",
+      embedUrl: "https://drive.google.com/file/d/1s6jzNXT3qdutXg0Fx_6kGpAreEwR0glk/preview",
+      description: "Analyzing India's historic Results-Framework Document (RFD) system, designed by Prof. Trivedi for all central ministries.",
+      takeaways: [
+        "Designing performance agreements for 80+ diverse government agencies.",
+        "The impact of the RFD system on administrative speed and focus.",
+        "Key insights from India's Cabinet Secretariat implementation era."
+      ]
+    },
+    {
+      id: 11,
+      title: "GPM of Public Enterprises (MoU India)",
+      embedUrl: "https://drive.google.com/file/d/1LOBRcZVBHWKAO-dI9ehnfxbjF4dDkApZ/preview",
+      description: "The origins and mechanisms of the Memorandum of Understanding (MoU) system that revitalized Indian state-owned enterprises.",
+      takeaways: [
+        "Evaluating public enterprise efficiency using commercial and social metrics.",
+        "Decentralizing decision-making power through structured performance contracts.",
+        "Achieving market competitiveness in major public sector undertakings (PSUs)."
+      ]
+    },
+    {
+      id: 12,
+      title: "Case Study of Kenya's Performance Contracts",
+      embedUrl: "https://drive.google.com/file/d/17eV1d77xLH5LQfwbTpO_hTxMMzdjat-N/preview",
+      description: "Reviewing the highly successful implementation of performance contracting across the public service of Kenya.",
+      takeaways: [
+        "Scaling performance contracts from local councils to central ministries.",
+        "The role of leadership commitment and public audits in driving compliance.",
+        "Quantifiable outcomes of Kenyan public service reform initiatives."
+      ]
+    },
+    {
+      id: 13,
+      title: "Case Study of Bangladesh System (APA)",
+      embedUrl: "https://drive.google.com/file/d/1eIONVgd867RvfJZNCs2DDnDN7ehLKUJ9/preview",
+      description: "Analyzing the Annual Performance Agreement (APA) system, standardizing governance evaluation and development targets in Bangladesh.",
+      takeaways: [
+        "Adapting GPM frameworks to support long-term five-year national plans.",
+        "Improving coordination and accountability across field offices and ministries.",
+        "Key success metrics and lessons learned from the Bangladeshi APA rollout."
+      ]
+    }
+  ];
+
+  const playlistContainer = document.getElementById('academy-playlist');
+  const theaterPlayer = document.getElementById('theater-player');
+  const theaterSessionLabel = document.getElementById('theater-session-label');
+  const theaterSessionTitle = document.getElementById('theater-session-title');
+  const theaterSessionDesc = document.getElementById('theater-session-desc');
+  const theaterTakeaways = document.getElementById('theater-session-takeaways');
+  const infoContainer = document.querySelector('.theater-info');
+
+  function renderPlaylist() {
+    if (!playlistContainer) return;
+    
+    playlistContainer.innerHTML = '';
+    GPM_SESSIONS.forEach((session, index) => {
+      const paddedNum = String(session.id).padStart(2, '0');
+      const item = document.createElement('div');
+      item.className = `playlist-item${index === 0 ? ' active' : ''}`;
+      item.dataset.id = session.id;
+      
+      item.innerHTML = `
+        <div class="playlist-num">${paddedNum}</div>
+        <div class="playlist-details">
+          <div class="playlist-title">${session.title}</div>
+          <div class="playlist-meta">Session ${paddedNum} · Video</div>
+        </div>
+        <div class="playlist-play-icon">
+          <i class="fa-solid fa-circle-play"></i>
+        </div>
+      `;
+      
+      item.addEventListener('click', () => {
+        switchActiveSession(session.id);
+      });
+      
+      playlistContainer.appendChild(item);
+    });
+  }
+
+  function switchActiveSession(sessionId) {
+    const session = GPM_SESSIONS.find(s => s.id === sessionId);
+    if (!session) return;
+
+    // Toggle active class in sidebar items
+    const items = playlistContainer.querySelectorAll('.playlist-item');
+    items.forEach(item => {
+      if (parseInt(item.dataset.id) === sessionId) {
+        item.classList.add('active');
+      } else {
+        item.classList.remove('active');
+      }
+    });
+
+    // Animate transition of content text
+    if (infoContainer) {
+      infoContainer.classList.add('fade-out');
+    }
+
+    setTimeout(() => {
+      // Swap Iframe URL
+      if (theaterPlayer) {
+        theaterPlayer.src = session.embedUrl;
+      }
+
+      // Update Texts
+      const paddedNum = String(session.id).padStart(2, '0');
+      if (theaterSessionLabel) {
+        theaterSessionLabel.textContent = `Session ${paddedNum} · Course Lecture`;
+      }
+      if (theaterSessionTitle) {
+        theaterSessionTitle.textContent = session.title;
+      }
+      if (theaterSessionDesc) {
+        theaterSessionDesc.textContent = session.description;
+      }
+
+      // Update Takeaways list
+      if (theaterTakeaways) {
+        theaterTakeaways.innerHTML = '';
+        session.takeaways.forEach(takeaway => {
+          const li = document.createElement('li');
+          li.textContent = takeaway;
+          theaterTakeaways.appendChild(li);
+        });
+      }
+
+      // Animate Back In
+      if (infoContainer) {
+        infoContainer.classList.remove('fade-out');
+      }
+    }, 400);
+  }
+
+  // Initialize GPM Academy Playlist
+  renderPlaylist();
+
 });
