@@ -1,0 +1,13 @@
+# Netlify Configuration File
+# Documentation: https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  # The directory containing the static HTML/CSS/JS files
+  publish = "."
+
+# Custom Redirect rules
+[[redirects]]
+  # Redirect any broken routes or page errors directly to our custom 404 page
+  from = "/*"
+  to = "/404.html"
+  status = 404
