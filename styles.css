@@ -68,6 +68,11 @@ html {
   scroll-padding-top: 80px;
 }
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 body {
   font-family: var(--font-body);
   font-size: 16px;
@@ -75,7 +80,6 @@ body {
   color: var(--text-secondary);
   background-color: var(--bg-primary);
   transition: background-color 0.5s ease, color 0.5s ease;
-  overflow-x: hidden;
 }
 
 /* ===== TYPOGRAPHY ===== */
@@ -1751,6 +1755,12 @@ textarea.form-control {
 }
 
 @media (max-width: 600px) {
+  .logo {
+    font-size: 1.15rem;
+  }
+  .nav-controls {
+    gap: 12px;
+  }
   .container {
     padding: 0 20px;
   }
