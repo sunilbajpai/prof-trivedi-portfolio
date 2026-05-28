@@ -934,9 +934,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 400);
   }
 
-  // Set up Course Tab Controls
-  tabButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
+  // Set up Course Tab Controls via Event Delegation
+  const tabsContainer = document.querySelector('.academy-tabs');
+  if (tabsContainer) {
+    const handleTabChange = (e) => {
+      const btn = e.target.closest('.tab-btn');
+      if (!btn) return;
+      
       const targetCourse = btn.dataset.course;
       if (targetCourse === activeCourse) return;
 
@@ -954,8 +958,10 @@ document.addEventListener('DOMContentLoaded', () => {
       if (firstSession) {
         switchActiveSession(firstSession.id);
       }
-    });
-  });
+    };
+
+    tabsContainer.addEventListener('click', handleTabChange);
+  }
 
   // Initialize GPM Academy Playlist
   renderPlaylist();

@@ -1418,6 +1418,7 @@ textarea.form-control {
   background: rgba(0, 0, 0, 0.01);
   border-bottom: 1px solid var(--border-color);
   gap: 8px;
+  pointer-events: auto;
 }
 
 .tab-btn {
@@ -1435,6 +1436,7 @@ textarea.form-control {
   cursor: pointer;
   transition: var(--transition-fast);
   white-space: nowrap;
+  pointer-events: auto;
 }
 
 .tab-btn:hover {
@@ -1668,6 +1670,13 @@ textarea.form-control {
 
 /* ===== RESPONSIVE MEDIA QUERIES ===== */
 @media (max-width: 992px) {
+  header {
+    background-color: var(--bg-tertiary) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    box-shadow: 0 4px 30px var(--shadow-color) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+  }
   .hero-grid {
     grid-template-columns: 1fr;
     text-align: center;
